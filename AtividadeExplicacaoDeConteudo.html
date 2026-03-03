@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Material de Estudo Digital - Modelo TCP/IP</title>
+</head>
+
+<body>
+
+    <h1>Material de Estudo Digital</h1>
+    <h2>Disciplina: Redes de Computadores</h2>
+    <h3>Conteúdo: Modelo TCP/IP</h3>
+
+    <p>
+        O Modelo TCP/IP é a base da comunicação na Internet. Ele organiza
+        a transmissão de dados em quatro camadas, cada uma com funções
+        específicas que permitem a comunicação entre dispositivos
+        em redes locais e globais.
+    </p>
+
+    <hr>
+
+    <h2>1. Camada de Acesso à Rede</h2>
+
+    <p>
+        A Camada de Acesso à Rede é responsável pela transmissão física
+        dos dados através do meio físico (cabos, fibra óptica ou Wi-Fi).
+        Ela define como os dados serão enviados e recebidos na rede local.
+    </p>
+
+    <ul>
+        <li>Transmissão de sinais elétricos ou ondas de rádio</li>
+        <li>Uso de endereço MAC</li>
+        <li>Controle de acesso ao meio</li>
+    </ul>
+
+    <p><strong>Exemplo:</strong> Quando dois computadores estão na mesma rede,
+    os dados são enviados utilizando quadros Ethernet identificados por
+    endereços físicos (MAC).</p>
+
+    <hr>
+
+    <h2>2. Camada de Internet</h2>
+
+    <p>
+        A Camada de Internet é responsável pelo endereçamento lógico
+        (IP) e pelo roteamento dos pacotes entre diferentes redes.
+    </p>
+
+    <ul>
+        <li>Adiciona o endereço IP de origem e destino</li>
+        <li>Define o caminho até o destino</li>
+        <li>Pode fragmentar pacotes grandes</li>
+    </ul>
+
+    <p>
+        Protocolos principais: IP (IPv4 e IPv6) e ICMP.
+    </p>
+
+    <p><strong>Exemplo:</strong> Ao acessar um site, o pacote IP contém
+    o endereço do seu computador e o endereço do servidor destino.</p>
+
+    <hr>
+
+    <h2>3. Camada de Transporte</h2>
+
+    <p>
+        A Camada de Transporte garante a comunicação fim a fim
+        entre aplicações. Ela pode oferecer comunicação confiável
+        ou rápida, dependendo do protocolo utilizado.
+    </p>
+
+    <h3>TCP (Transmission Control Protocol)</h3>
+    <ul>
+        <li>Orientado à conexão</li>
+        <li>Garante entrega e ordem dos dados</li>
+        <li>Possui controle de erro e congestionamento</li>
+        <li>Utiliza o processo Three-Way Handshake</li>
+    </ul>
+
+    <h3>UDP (User Datagram Protocol)</h3>
+    <ul>
+        <li>Não orientado à conexão</li>
+        <li>Não garante entrega</li>
+        <li>Mais rápido e com menos sobrecarga</li>
+    </ul>
+
+    <p><strong>Exemplo:</strong> Sites utilizam TCP para garantir
+    que a página carregue corretamente. Já jogos online utilizam UDP
+    para maior velocidade.</p>
+
+    <hr>
+
+    <h2>4. Camada de Aplicação</h2>
+
+    <p>
+        A Camada de Aplicação é onde os programas utilizam os serviços
+        da rede. É a camada mais próxima do usuário.
+    </p>
+
+    <ul>
+        <li>HTTP / HTTPS - Navegação Web</li>
+        <li>FTP - Transferência de arquivos</li>
+        <li>SMTP - Envio de e-mails</li>
+        <li>DNS - Resolução de nomes</li>
+    </ul>
+
+    <p><strong>Exemplo:</strong> Quando você digita um endereço
+    no navegador, o protocolo HTTP solicita a página ao servidor.</p>
+
+    <hr>
+
+    <h2>6. Tabela Resumo</h2>
+
+    <table border="1">
+        <tr>
+            <th>Camada</th>
+            <th>Função</th>
+            <th>Protocolos</th>
+        </tr>
+
+        <tr>
+            <td>Aplicação</td>
+            <td>Serviços ao usuário</td>
+            <td>HTTP, FTP, SMTP, DNS</td>
+        </tr>
+
+        <tr>
+            <td>Transporte</td>
+            <td>Entrega fim a fim</td>
+            <td>TCP, UDP</td>
+        </tr>
+
+        <tr>
+            <td>Internet</td>
+            <td>Endereçamento e roteamento</td>
+            <td>IP, ICMP</td>
+        </tr>
+
+        <tr>
+            <td>Acesso à Rede</td>
+            <td>Transmissão física</td>
+            <td>Ethernet, Wi-Fi</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <h2>7. Avaliação do Material</h2>
+
+    <form action="#" method="post">
+
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label>O conteúdo foi claro?</label><br>
+        <input type="radio" name="clareza" value="sim"> Sim<br>
+        <input type="radio" name="clareza" value="parcial"> Parcialmente<br>
+        <input type="radio" name="clareza" value="nao"> Não<br><br>
+
+        <label>Qual protocolo você considera mais fácil de entender?</label><br>
+        <select name="protocolo">
+            <option>TCP</option>
+            <option>UDP</option>
+            <option>IP</option>
+            <option>HTTP</option>
+        </select><br><br>
+
+        <label>Dê uma nota (0 a 10):</label><br>
+        <input type="number" min="0" max="10"><br><br>
+
+        <label>Comentários:</label><br>
+        <textarea rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Enviar Avaliação">
+
+    </form>
+
+</body>
+</html>
