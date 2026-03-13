@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="enzosynthwave">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Curiosidades e fatos históricos da Ciência da Computação">
+    <meta name="author" content="Portal Computação">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="temacerto.css">
+    <link rel="stylesheet" href="FadeInAutomatico.css">
+
+    <title>Arquivo Confuso da Computação</title>
+</head>
+
+<body class="bg-base-200 min-h-screen font-sans">
+
+<div id="pagina">
+
+    <header class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl -mt-48
+            transition-all duration-300
+            hover:scale-105;
+            hover:shadow-[0_0_30px_var(--color-primary)]">
+      <h1 class="text-5xl font-bold text-primary">
+        Arquivo (Quase) Perdido da Ciência da Computação
+      </h1>
+      <p class="py-6">
+        Uma coletânea caótica de fatos históricos, curiosos e inesperados.
+      </p>
+    </div>
+  </div>
+</header>
+
+    <nav id="menu-principal" class="max-w-6xl mx-auto -mt-48">
+    <div class="grid grid-cols-6 bg-base-300 rounded-box overflow-hidden">
+
+        <a href="#pioneiros"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-primary hover:text-black hover:shadow-[0_0_30px_var(--color-primary)] transition-all duration-200">
+           Pioneiros
+        </a>
+
+        <a href="#bugs"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-success hover:text-black hover:shadow-[0_0_30px_var(--color-success)] transition-all duration-200">
+           Bugs
+        </a>
+
+        <a href="#internet"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-accent hover:text-black hover:shadow-[0_0_30px_var(--color-accent)] transition-all duration-200">
+           Internet
+        </a>
+
+        <a href="#linguagens"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-info hover:text-black hover:shadow-[0_0_30px_var(--color-info)] transition-all duration-200">
+           Linguagens
+        </a>
+
+        <a href="#linha-do-tempo"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-warning hover:text-black hover:shadow-[0_0_30px_var(--color-warning)] transition-all duration-200">
+           Linha do Tempo
+        </a>
+
+        <a href="#formulario"
+           class="h-20 flex items-center justify-center
+           text-white hover:bg-error hover:text-black hover:shadow-[0_0_30px_var(--color-error)] transition-all duration-200">
+           Envie Algo
+        </a>
+    </div>
+</nav>
+    
+
+    <main>
+
+        <section id="pioneiros" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-primary)]">
+            <h2 class="text-5xl font-bold text-primary">Pioneiros Esquecidos</h2>
+            </div>
+            </div>
+            </div>
+
+            <article class="hero bg-base-200 min-h-screen .revealscroll">
+                <div class="hero-content flex-col lg:flex-row -mt-56">
+                    <img
+                 src="https://media.newyorker.com/photos/64123041652f9d9fe976fff0/master/w_1600,c_limit/ra1146.jpg" 
+                 alt="Imagem de Ada" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]" style="margin-left: 20px;">
+                    <div class="card-body">
+                <div>
+                <h3 class="text-5xl font-bold card-title">Ada Lovelace</h3>
+                <p class="py-6"><b>Considerada a primeira programadora da história.</b></p>
+                <details>
+                    <summary><b>Ver mais</b></summary>
+                    <p class="py-6"><b>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</b></p>
+                </details>
+            </div>
+            </div>
+            </div>
+            </div>
+            </article>
+
+            <article class="hero bg-base-200 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row flex-wrap items-center gap-8">
+        
+                    <img
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Alan_Turing_%281951%29.jpg/250px-Alan_Turing_%281951%29.jpg"
+                 alt="Imagem de Alan" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">Alan Turing</h3>
+                <p class="py-6"><b>Criador do conceito de Máquina de Turing</b></p>
+                <p class="py-6"><b>"Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."</b></p>
+            </div>
+            </div>
+            <aside class="card w-64 bg-primary text-primary-content
+            shadow-xl transition-all duration-300
+            hover:scale-105 
+            hover:-translate-y-1
+            hover:shadow-[0_0_30px_var(--color-primary)]">
+            <div class="card-body">
+            <h4 class="card-title">💡 <b>Curiosidade Lateral</b></h4>
+            <p><b>Durante décadas, o trabalho de Turing foi mantido em segredo.</b></p>
+            </div>
+            </aside>
+            
+            </div>
+            </article>
+        </section>
+
+            
+
+        <section id="bugs" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-success)]">
+            <h2 class="text-5xl font-bold text-success">Histórias de Bugs</h2>
+            </div>
+            </div>
+            </div>
+
+            <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Primeiro Bug Real</h3>
+                <p class="py-6"><b>Uma mariposa encontrada em um computador em 1947.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUOHDtohIYTNPEbtd2gOY9zSlS6vMfuQMAg&s"
+                 alt="Imagem do Primeiro Bug" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Registro do "bug" colado no relatório técnico.</b></figcaption>
+                </figure>
+                </div>
+                </div>
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Vírus Creeper</h3>
+                <p class="py-6"><b>Primeiro vírus da história (1971).</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://upload.wikimedia.org/wikipedia/commons/e/eb/CreeperWorm.jpg"
+                 alt="Imagem do Primeiro Vírus" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                </figure>
+                <pre>
+<b>I'M THE CREEPER : CATCH ME IF YOU CAN</b>
+                </pre>
+            </div>
+            </div>
+            </aside>
+            </article>
+        </section>
+
+        <section id="internet" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-accent)]">
+            <h2 class="text-5xl font-bold text-accent">Curiosidades da Internet</h2>
+            </div>
+            </div>
+            </div>
+
+            <article class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">Primeiro Website</h3>
+            <p class="py-6"><b>Criado em 1991 por Tim Berners-Lee.</b></p>
+            <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://linhadefensiva.org/wp-content/uploads/2013/04/primeirowww12.jpg"
+                 alt="Imagem do Primeiro Website" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+            </figure>
+            </div>
+            </div>
+
+            <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">ARPANET</h3>
+            <p class="py-6"><b>A precursora da internet moderna.</b></p>
+            <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://s2.glbimg.com/SUxOV33u40x8fEBeBeIpj_GNSYI=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/10/29/arpanet.jpg"
+                 alt="Imagem de Pesquisadores Desenvolvendo a ARPANET" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><b>Registro do desenvolvimento da ARPANET</b></figcaption>
+                </figure>
+                 <ul>
+                    <li><b>Primeira mensagem enviada: "LO"</b></li>
+                    <li><b>sistema caiu antes de completar "LOGIN"</b></li>
+                </ul>
+            </div>
+            </div>
+            </aside>
+            
+
+            <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">Emojis e ASCII</h3>
+            <p class="py-6"><b>Antes dos emojis gráficos, usávamos:</b></p>
+            <h3 class="text-5xl font-bold card-content"><b>:-)</b></h3>
+            <h3 class="text-5xl font-bold card-content"><b>;-)</b></h3>
+            <h3 class="text-5xl font-bold card-content"><b>:-D</b></h3>
+
+            </div>
+            </div>
+
+            </aside>
+
+            </article>
+        </section>
+
+        <section id="linguagens" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-info)]">
+            <h2 class="text-5xl font-bold text-info">Linguagens de programação</h2>
+            </div>
+            </div>
+            </div>
+
+            <article class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">COBOL</h3>
+            <p><b>Ainda usado em sistemas bancários.</b></p>
+            </div>
+            </div>
+
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-info text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">C</h3>
+            <p><b>Base para muitos sistemas operacionais.</b></p>
+            </div>
+            </div>
+            </aside>
+
+           <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-5xl font-bold card-title">HTML</h3>
+            <p><b>Não é linguagem de programação, mas estrutura a web.</b></p>
+            </div>
+            </div>
+            </aside>
+        </article>
+
+             <div class="mt-6 overflow-x-auto rounded-box border border-base-content/5 bg-base-100
+             transition-all duration-300
+             hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+                <table class="table">
+                    <caption><b>Linguagens e Ano de Criação (Dados históricos aproximados)</b></caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><b>Linguagem</b></th>
+                            <th><b>Ano</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><b>COBOL</b></td>
+                            <td><b>1959</b></td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td><b>C</b></td>
+                            <td><b>1972</b></td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td><b>Python</b></td>
+                            <td><b>1991</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+        </section>
+
+<section id="linha-do-tempo" class="py-20">
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-warning)]">
+            <h2 class="text-5xl font-bold text-warning">Linha do Tempo da Computação</h2>
+            </div>
+            </div>
+            </div>
+
+<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+
+<li class="reveal-scroll">
+
+<div class="timeline-middle text-warning">
+●
+</div>
+
+<div class="timeline-start mb-10 md:text-end">
+<time class="font-mono italic text-warning"><b>1837</b></time>
+
+<div class="card bg-warning text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-warning)]">
+<div class="card-body">
+<h3 class="card-title"><b>Máquina Analítica</b></h3>
+</div>
+</div>
+
+</div>
+
+<hr/>
+</li>
+
+
+<li class="reveal-scroll">
+
+<hr/>
+
+<div class="timeline-middle text-warning">
+●
+</div>
+
+<div class="timeline-end md:mb-10">
+
+<time class="font-mono italic text-warning"><b>1946</b></time>
+
+<div class="card bg-warning text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-warning)]">
+<div class="card-body">
+<h3 class="card-title"><b>ENIAC</b></h3>
+</div>
+</div>
+
+</div>
+
+<hr/>
+</li>
+
+
+<li class="reveal-scroll">
+
+<hr/>
+
+<div class="timeline-middle text-warning">
+●
+</div>
+
+<div class="timeline-start mb-10 md:text-end">
+
+<time class="font-mono italic text-warning"><b>1969</b></time>
+
+<div class="card bg-warning text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-warning)]">
+<div class="card-body">
+<h3 class="card-title"><b>ARPANET</b></h3>
+</div>
+</div>
+
+</div>
+
+<hr/>
+</li>
+
+
+<li class="reveal-scroll">
+
+<hr/>
+
+<div class="timeline-middle text-warning">
+●
+</div>
+
+<div class="timeline-end md:mb-10">
+
+<time class="font-mono italic text-warning"><b>1991</b></time>
+
+<div class="card bg-warning text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-warning)]">
+<div class="card-body">
+<h3 class="card-title"><b>Primeiro Site</b></h3>
+</div>
+</div>
+
+</div>
+
+<hr/>
+</li>
+
+
+<li class="reveal-scroll">
+
+<hr/>
+
+<div class="timeline-middle text-warning">
+●
+</div>
+
+<div class="timeline-start mb-10 md:text-end">
+
+<time class="font-mono italic text-warning"><b>2007</b></time>
+
+<div class="card bg-warning text-primary-content w-96
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-warning)]">
+<div class="card-body">
+<h3 class="card-title"><b>Smartphones</b></h3>
+</div>
+</div>
+
+</div>
+
+</li>
+
+</ul>
+
+</section>
+
+
+<header class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl -mt-48
+            transition-all duration-300
+            hover:scale-105;
+            hover:shadow-[0_0_30px_var(--color-primary)]">
+      <h1 class="text-5xl font-bold text-primary">
+        Fatos Inúteis (Mas Incríveis) da Ciência da Computação
+      </h1>
+      <p class="py-6">
+        Informações que não vão melhorar seu código… mas vão melhorar sua aula.
+      </p>
+    </div>
+  </div>
+</header>
+
+<nav id="menu-principal" class="max-w-6xl mx-auto -mt-48">
+    <div class="grid grid-cols-5 bg-base-300 rounded-box overflow-hidden">
+
+        <a href="#nomes"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-primary hover:text-black hover:shadow-[0_0_30px_var(--color-primary)] transition-all duration-200">
+           Nomes Estranhos
+        </a>
+
+        <a href="#acidentes"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-success hover:text-black hover:shadow-[0_0_30px_var(--color-success)] transition-all duration-200">
+           Acidentes Tecnológicos
+        </a>
+
+        <a href="#dinheiro"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-accent hover:text-black hover:shadow-[0_0_30px_var(--color-accent)] transition-all duration-200">
+           Erros Caríssimos
+        </a>
+
+        <a href="#aleatorio"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-info hover:text-black hover:shadow-[0_0_30px_var(--color-info)] transition-all duration-200">
+           Aleatoriedades
+        </a>
+
+        <a href="#form"
+           class="h-20 flex items-center justify-center
+           text-white hover:bg-warning hover:text-black hover:shadow-[0_0_30px_var(--color-warning)] transition-all duration-200">
+           Envie Algo Inútil
+        </a>
+    </div>
+</nav>
+
+
+
+<section id="nomes" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-primary)]">
+            <h2 class="text-5xl font-bold text-primary">Nomes Estranhos da Computação</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">Spam vem de um presunto</h3>
+                <p class="py-6"><b>O termo "spam" para emails indesejados vem de um esquete do 
+                Monty Python onde a palavra SPAM (marca de presunto enlatado) era repetida incessantemente.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://upload.wikimedia.org/wikipedia/en/f/fc/SPAM_SONG_7%22.jpg"
+                 alt="Imagem do Monty Python" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Imagem da "Spam Song", música característica da piada de Monty Python</b></figcaption>
+                </figure>
+                </div>
+                </div>
+
+
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">Bluetooth tem nome viking</h3>
+                <p class="py-6"><b>A tecnologia foi nomeada em homenagem ao rei 
+            <em>Harald "Bluetooth" Gormsson</em>, que unificou a Dinamarca.
+            A ideia era “unificar dispositivos”.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/1200_Harald_Bl%C3%A5tand_anagoria.jpg/500px-1200_Harald_Bl%C3%A5tand_anagoria.jpg"
+                 alt="Imagem do Bluetooth" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Representação em pedra do Batismo do rei Harald</b></figcaption>
+                </figure>
+                </div>
+                </div>
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">Bug é literalmente bug</h3>
+                <p class="py-6"><b>O famoso inseto encontrado no computador <abbr title="Harvard Mark II">Mark II</abbr> em 1947 
+                era uma mariposa de verdade.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUOHDtohIYTNPEbtd2gOY9zSlS6vMfuQMAg&s"
+                 alt="Imagem do Primeiro Bug" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption>
+                    <details>
+                        <summary class="justify-center text-center"><b>Detalhe inútil:</b></summary>
+                 <p><b>O inseto ainda está preservado em um museu.</b></p>
+                 </details>
+                </figcaption>
+                </figure>
+            </div>
+            </div>
+            </aside>
+            </article>
+        </section>
+
+
+<section id="acidentes" style="margin-top: 100px;">
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-success)]">
+            <h2 class="text-5xl font-bold text-success">Acidentes Tecnológicos Surpreendentes</h2>
+            </div>
+            </div>
+            </div>
+
+   <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O primeiro domínio registrado</h3>
+                <p class="py-6"><b>O primeiro domínio da história foi symbolics.com registrado em 1985.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin:10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://i.pinimg.com/474x/62/61/b0/6261b0fcba032d46f36d21e5bdc667fa.jpg"
+                 alt="Imagem do Symbolics" width="300" height="700"
+                 class="ml-2 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><p><b>Imagem do symbolics.com</b></p></figcaption>
+                </figure>
+            </div>
+            </div>
+
+
+                <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O erro que quase causou guerra nuclear</h3>
+                <p class="py-6"><b> Em 1983, um sistema soviético detectou falsamente mísseis americanos.
+            O oficial Stanislav Petrov decidiu ignorar o alerta.</b></p>
+            <p><b>Um bug pode ter salvo o mundo.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://upload.wikimedia.org/wikipedia/commons/6/67/Stanislaw-jewgrafowitsch-petrow-2016.jpg"
+                 alt="Imagem do Stanislav" width="200" height="100"
+                 class="ml-12 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Stanislav em sua casa de 2016</b></figcaption>
+                </figure>
+                </div>
+                </div>
+                </aside>
+
+
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O computador que pesava 27 toneladas</h3>
+                <p class="py-6"><b>O ENIAC ocupava 167 m² e consumia energia suficiente para escurecer parte da cidade.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin:10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://d34zi8nxray0rk.cloudfront.net/102695698-03-01.jpg?"
+                 alt="Imagem do ENIAC" width="300" height="700"
+                 class="ml-2 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><p><b>Imagem do computador ENIAC</b></p></figcaption>
+                </figure>
+            </div>
+            </div>
+            </aside>
+            </article>
+
+</section>
+
+
+<section id="dinheiro" style="margin-top: 100px;">
+
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-accent)]">
+            <h2 class="text-5xl font-bold text-accent">Erros Caríssimos</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-accent text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O traço que custou milhões</h3>
+                <p class="py-6"><b>Em 1962, a NASA perdeu a sonda Mariner 1 por causa de um erro em uma fórmula matemática:
+                faltava um simples hífen.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin:10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://www.edn.com/wp-content/uploads/media-1193429-mariner-1.jpg"
+                 alt="Imagem da Mariner" width="300" height="300"
+                 class="ml-2 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><p><b>Imagem da Mariner 1</b></p></figcaption>
+                </figure>
+            </div>
+            </div>
+
+
+                <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-accent text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">Bitcoin jogado no lixo</h3>
+                <p class="py-6"><b> Um homem no Reino Unido descartou um HD com 8.000 bitcoins.</b></p>
+            <p><b>Valor atual: melhor não calcular.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://livecoins.com.br/wp-content/uploads/2019/02/james-howells.jpg"
+                 alt="Imagem de James" width="300" height="300"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Imagem de James Howells, que até hoje está em busca de seu HD</b></figcaption>
+                </figure>
+                </div>
+                </div>
+                </aside>
+    </article>
+</section>
+
+
+<section id="aleatorio" style="margin-top: 100px;">
+
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-info)]">
+            <h2 class="text-5xl font-bold text-info">Coisas Aleatórias que Você Não Pediu</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">O primeiro emoticon</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b>:-) foi sugerido em 1982 por Scott Fahlman.</b></h3>
+            </div>
+            </div>
+
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">A senha mais usada do mundo</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b>123456</b></h3>
+            </div>
+            </div>
+    </aside>
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">O Google já quebrou a internet</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b>Em 2009, o Google marcou acidentalmente 
+            todos os sites como maliciosos por 40 minutos.</b></h3>
+            </div>
+            </div>
+    </aside>
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-info text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">Computadores odeiam calor</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b>Um data center pode usar mais água para resfriamento do que uma pequena cidade.</b></h3>
+            </div>
+            </div>
+    </aside>
+    </article>
+
+</section>
+
+
+<section class="mt-6 overflow-x-auto rounded-box border border-base-content/5 bg-base-100
+             transition-all duration-300
+             hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-info)]">
+                <table class="table">
+                    <caption><b>Tabela Totalmente Necessária</b></caption>
+                    <thead>
+                        <tr>
+                            <th><b>Curiosidade</b></th>
+                            <th><b>Nível de Inutilidade</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Spam vem de presunto</b></td>
+                            <td><b>Alto</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Bluetooth é viking</b></td>
+                            <td><b>Médio</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Senha mais usada é 123456</b></td>
+                            <td><b>Crítico</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+        </section>
+
+        <header class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl -mt-48
+            transition-all duration-300
+            hover:scale-105;
+            hover:shadow-[0_0_30px_var(--color-primary)]">
+      <h1 class="text-5xl font-bold text-primary">
+        Coisas Que Seus Professores Não Contaram Sobre Computação
+      </h1>
+      <p class="py-6">
+        Fatos obscuros, bugs absurdos e Easter eggs históricos.
+      </p>
+    </div>
+  </div>
+</header>
+
+<nav id="menu-principal" class="max-w-6xl mx-auto -mt-48">
+    <div class="grid grid-cols-4 bg-base-300 rounded-box overflow-hidden">
+
+        <a href="#easter-eggs"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-primary hover:text-black hover:shadow-[0_0_30px_var(--color-primary)] transition-all duration-200">
+           Easter Eggs
+        </a>
+
+        <a href="#bugs-absurdos"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-success hover:text-black hover:shadow-[0_0_30px_var(--color-success)] transition-all duration-200">
+           Bugs Absurdos
+        </a>
+
+        <a href="#comandos-secretos"
+           class="h-20 flex items-center justify-center border-r border-base-content/20
+           text-white hover:bg-accent hover:text-black hover:shadow-[0_0_30px_var(--color-accent)] transition-all duration-200">
+           Comandos Estranhos
+        </a>
+
+        <a href="#formulario-secreto"
+           class="h-20 flex items-center justify-center border-base-content/20
+           text-white hover:bg-info hover:text-black hover:shadow-[0_0_30px_var(--color-info)] transition-all duration-200">
+           Envie Algo Suspeito
+        </a>
+    </div>
+</nav>
+
+
+<section id="easter-eggs" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-primary)]">
+            <h2 class="text-5xl font-bold text-primary">Easter Eggs</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Excel 97 tinha um simulador de voo escondido</h3>
+                <p class="py-6"><b>O Microsoft Excel 97 escondia um jogo 3D estilo simulador de voo dentro da planilha.</b></p>
+                <details>
+                <summary class="justify-center text-center"><b>Como ativava?</b></summary>
+                 <p><b>Era preciso selecionar células específicas e usar combinações absurdas de teclado.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://pbs.twimg.com/media/DZdXyaTWsAIlT9P.jpg"
+                 alt="Imagem do Simulador de Voo" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Imagem do Simulador de Voo</b></figcaption>
+                </figure>
+                </div>
+                </div>
+
+
+                <aside class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Google tem um T-Rex escondido</h3>
+                <p class="py-6"><b>Quando você fica sem internet no Chrome, aparece um dinossauro.
+                Se apertar espaço, começa um jogo infinito.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://play-lh.googleusercontent.com/6OfzHOao-o92uMhcVYN7OFyHE3VhUzcWVrR2hOTAjvPs7BFFs4AJip3srKeB0hVRA0Eg=w526-h296-rw"
+                 alt="Imagem do Jogo" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Imagem do Jogo</b></figcaption>
+                </figure>
+                </div>
+                </div>
+            </aside>
+
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Windows 95 tinha créditos escondidos</h3>
+                <p class="py-6"><b>Desenvolvedores colocaram seus nomes escondidos dentro do sistema.</b></p>
+                <style>
+                figure {
+                    display: table;
+                    margin: 10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://files.tecnoblog.net/wp-content/uploads/2021/03/easter-egg-windows-95-e1617109873102.png"
+                 alt="Imagem dos Creditos" width="300" height="200"
+                 class="max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                    <figcaption><b>Imagem dos créditos</b></figcaption>
+                </figure>
+            </div>
+            </div>
+            </aside>
+
+            <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-primary text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-primary)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O GitHub já teve um unicórnio voador</h3>
+                <p class="py-6"><b>Em versões antigas, existia um modo visual alternativo escondido.</b></p>
+            </div>
+            </div>
+            </aside>
+
+
+            </article>
+
+</section>
+
+
+
+<section id="bugs-absurdos" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-success)]">
+            <h2 class="text-5xl font-bold text-success">Bugs Absurdos da História</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O bug que destruiu um foguete em 37 segundos</h3>
+                <p class="py-6"><b>Em 1996, o foguete Ariane 5 explodiu por causa de uma conversão de número 
+                de 64 bits para 16 bits.</b></p>
+                <blockquote>
+                    <b>Custo do erro: aproximadamente 370 milhões de dólares.</b>
+                </blockquote>
+                <style>
+                figure {
+                    display: table;
+                    margin:10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://www.ariane.group/app/uploads/2024/05/1_variants.jpg"
+                 alt="Imagem da Ariane" width="300" height="300"
+                 class="ml-2 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><p><b>Imagem da Ariane 5</b></p></figcaption>
+                </figure>
+            </div>
+            </div>
+
+
+                <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O Y2K (Bug do Milênio)</h3>
+                <p class="py-6"><b>Sistemas antigos usavam apenas dois dígitos para o ano.
+                Em 2000, poderiam interpretar "00" como 1900.</b></p>
+            <p><b>O mundo gastou bilhões se preparando... e quase nada aconteceu.</b></p>
+
+                </div>
+                </div>
+                </aside>
+
+                <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O bug do Pentium</h3>
+                <p class="py-6"><b>Um erro microscópico na divisão de números em processadores Intel
+            causava resultados errados em cálculos específicos.</b></p>
+            <style>
+                figure {
+                    display: table;
+                    margin:10px;  
+                    text-align: center; 
+                }
+                figcaption {
+                    display: table-caption;
+                    caption-side: bottom;
+                    padding: 5px;
+                    font-weight: bold;
+                    color: black
+                    }
+                </style>
+                <figure>
+                <img
+                 src="https://jasoneckert.github.io/myblog/the-famous-pentium-fdiv-bug/pentium.png"
+                 alt="Imagem da Ariane" width="300" height="300"
+                 class="ml-2 max-w-sm rounded-lg shadow-2xl
+                 transition-all duration-300
+                 hover:scale-105"
+                 />
+                 <figcaption><p><b>Imagem do Intel Pentium</b></p></figcaption>
+                </figure>
+        
+        </div>
+        </div>
+        </aside>
+
+        <aside class="flex flex-wrap justify-center gap-6">
+                <div class="card bg-success text-primary-content w-96
+                 transition-all duration-300
+                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-success)]">
+                <div class="card-body">
+                <h3 class="text-5xl font-bold card-title">O erro que duplicou dinheiro</h3>
+                <p class="py-6"><b>Em 2012, um bug em um banco permitiu que clientes sacassem valores inexistentes.</b></p>
+        
+        </div>
+        </div>
+        </aside>
+    </article>
+
+</section>
+
+
+
+<section id="comandos-secretos" style="margin-top: 100px;">
+            <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-accent)]">
+            <h2 class="text-5xl font-bold text-accent">Comandos Estranhos e Inúteis</h2>
+            </div>
+            </div>
+            </div>
+
+    <article class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">Konami Code</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b>↑ ↑ ↓ ↓ ← → ← → B A</b></h3>
+            <p><b>Usado em dezenas de jogos e até em sites modernos.</b></p>
+            </div>
+            </div>
+
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">$ sudo make me a sandwich</h3>
+            <br>
+            <pre class="text-3xl font-bold card-content">Okay.</pre></b>
+            <p><b>Alguns sistemas Linux realmente respondem a isso.</b></p>
+            </div>
+            </div>
+    </aside>
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">O comando que trava o Windows</h3>
+            <br>
+            <pre class="text-3xl font-bold card-content">CON CON</pre></b>
+            <p><b>No Windows antigo, criar uma pasta chamada CON era impossível.</b></p>
+            </div>
+            </div>
+    </aside>
+
+    <aside class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-accent text-primary-content w-64
+            transition-all duration-300
+            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+            <div class="card-body">
+            <h3 class="text-3xl font-bold card-title">A senha mais comum do planeta</h3>
+            <br>
+            <h3 class="text-3xl font-bold card-content"><b><code>123456</code></b></h3>
+            <p><b>Continua sendo campeã mundial.</b></p>
+            </div>
+            </div>
+    </aside>
+    </article>
+
+</section>
+
+
+
+<section class="mt-6 overflow-x-auto rounded-box border border-base-content/5 bg-base-100
+             transition-all duration-300
+             hover:-translate-y-1 hover:shadow-[0_0_30px_var(--color-accent)]">
+                <table class="table">
+                    <caption><b>Tabela do Caos Digital</b></caption>
+                    <thead>
+                        <tr>
+                            <th><b>Evento</b></th>
+                            <th><b>Nível de Caos</b></th>
+                            <th><b>Custo Aproximado</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Ariane 5</b></td>
+                            <td><b>Explosivo</b></td>
+                            <td><b>370 milhões USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Bug do Pentium</b></td>
+                            <td><b>Matemático</b></td>
+                            <td><b>475 milhões USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Y2K</b></td>
+                            <td><b>Psicológico</b></td>
+                            <td><b>Bilhões USD</b></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+        </section>
+
+
+<section id="form" class="py-20">
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-warning)]">
+            <h2 class="text-5xl font-bold text-warning">Envie um Fato Inútil</h2>
+            </div>
+            </div>
+            </div>
+
+<div class="card bg-base-200 shadow-xl p-6 max-w-md mx-auto 
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-warning)]">
+
+<h2 class="text-2xl font-bold text-warning mb-4">
+Cadastro de Inutilidades
+</h2>
+
+<form class="flex flex-col gap-4">
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Nome:</span>
+<br>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-warning w-full w-full min-h-[125px] p-5
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-warning)]"
+placeholder="Digite seu nome">
+</textarea>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Fato inútil:</span>
+<br>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-warning w-full w-full min-h-[125px] p-5
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-warning)]"
+placeholder="Digite seu fato inútil">
+</textarea>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Grau de inutilidade</span>
+<span class="text-warning font-bold">0–10</span>
+</label>
+
+<input type="range" min="0" max="10"
+class="range range-warning" />
+
+<div class="flex justify-between text-xs px-2">
+<span>0</span>
+<span>5</span>
+<span>10</span>
+</div>
+</div>
+
+
+<button
+class="btn btn-warning w-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_var(--color-warning)]">
+Enviar inutilidade
+</button>
+
+</form>
+
+</div>
+    
+</section>
+
+ <section id="formulario" class="py-20">
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-error)]">
+            <h2 class="text-5xl font-bold text-error">Envie sua Curiosidade</h2>
+            </div>
+            </div>
+            </div>
+
+<div class="card bg-base-200 shadow-xl p-6 max-w-md mx-auto
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-error)]">
+
+<h2 class="text-2xl font-bold text-error mb-4">
+Informações
+</h2>
+
+<form class="flex flex-col gap-4">
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Nome</span>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-error w-full p-3 leading-relaxed min-h-[120px]
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-error)]"
+placeholder="Digite seu nome">
+</textarea>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Email:</span>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-error w-full p-3 leading-relaxed min-h-[120px]
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-error)]"
+placeholder="Digite seu e-mail">
+</textarea>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Categoria:</span>
+</label>
+
+<div class="tooltip tooltip-error" 
+         data-tip="Escolha o tipo de curiosidade"
+         style="display: flex; flex-direction: column;">
+         
+         <style>
+           .tooltip-error::before { display: none !important; }
+         </style>
+
+         <select class="select select-bordered select-error w-full pl-4">
+            <option disabled selected>Escolha sua Categoria Aqui</option>
+            <option>Pioneiros</option>
+            <option>Bugs</option>
+            <option>Internet</option>
+            <option>Linguagens</option>
+         </select>
+    </div>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Data do fato:</span>
+</label>
+
+<input type="date"
+class="input input-bordered input-error w-full pl-4
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-error)]"">
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Sua curiosidade:</span>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-error w-full p-3 leading-relaxed min-h-[120px]
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-error)]""
+placeholder="Digite sua curiosidade">
+</textarea>
+</div>
+
+
+<button
+class="btn btn-error w-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_var(--color-error)]">
+Enviar
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+    
+<section id="formulario-secreto" class="py-20">
+    <div class="hero bg-base-200 py-16">
+            <div class="hero-content text-center">
+                <div class="max-w-xl backdrop-blur-md bg-base-100/30 p-10 rounded-box shadow-xl
+                transition-all duration-300
+                hover:scale-105;
+                hover:shadow-[0_0_30px_var(--color-info)]">
+            <h2 class="text-5xl font-bold text-info">Envie um Bug ou Easter Egg</h2>
+            </div>
+            </div>
+            </div>
+
+    <div class="card bg-base-200 shadow-xl p-6 max-w-md mx-auto
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-info)]">
+
+<h2 class="text-2xl font-bold text-info mb-4">
+Cadastro Suspeito
+</h2>
+
+<form class="flex flex-col gap-4">
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Seu Nome:</span>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-info w-full p-3 leading-relaxed min-h-[120px]
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-info)]"
+placeholder="Digite seu nome">
+</textarea>
+</div>
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Tipo:</span>
+</label>
+
+<div class="tooltip tooltip-info" 
+         data-tip="Escolha o tipo:"
+         style="display: flex; flex-direction: column;">
+         
+         <style>
+           .tooltip-error::before { display: none !important; }
+         </style>
+
+         <select class="select select-bordered select-info w-full pl-4">
+            <option disabled selected>Escolha o Tipo Aqui</option>
+            <option>Bug</option>
+            <option>Easter Egg</option>
+            <option>Comando Estranho</option>
+         </select>
+    </div>
+</div>
+
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Descrição:</span>
+</label>
+
+<textarea
+class="textarea textarea-bordered textarea-info w-full p-3 leading-relaxed min-h-[120px]
+transition-all duration-300
+hover:shadow-[0_0_30px_var(--color-info)]"
+placeholder="Descreva">
+</textarea>
+</div>
+
+<div class="form-control w-full">
+<label class="label">
+<span class="label-text">Grau de estranheza</span>
+<span class="text-info font-bold">0–10</span>
+</label>
+
+<input type="range" min="0" max="10"
+class="range range-info" />
+
+<div class="flex justify-between text-xs px-2">
+<span>0</span>
+<span>5</span>
+<span>10</span>
+</div>
+</div>
+
+
+<button
+class="btn btn-info w-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_var(--color-info)]">
+Enviar
+</button>
+
+</form>
+
+</div>
+
+
+</section>
+
+
+</main>
+</body>
+
+<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+
+  <nav>
+    <h6 class="footer-title">Instituto Internacional</h6>
+    <span class="text-sm">© 2026 Informações Desnecessárias</span>
+    <address class="link link-hover not-italic">
+      Email: <a href="mailto:inutilidades@caosdigital.com">inutilidades@caosdigital.com</a>
+    </address>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title">Arquivo Confuso</h6>
+    <span class="text-sm">© 2026 Computação</span>
+    <address class="link link-hover not-italic">
+      Contato: <a href="mailto:contato@computacao.com">contato@computacao.com</a>
+    </address>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title">Ultra-Secreto</h6>
+    <span class="text-sm">© 2026 Computação</span>
+    <address class="link link-hover not-italic">
+      <a href="mailto:contato@ultrasecreto.dev">contato@ultrasecreto.dev</a>
+    </address>
+  </nav>
+</footer>
+</html>
