@@ -1,0 +1,105 @@
+<html lang="pt-BR">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Bichinho Virtual</title>
+</head>
+
+<style>
+body{
+    background-image: url('bg.png'); 
+    transition: background-image 1.5s ease-in-out;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#estrelas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;                    
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.estrela {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px gold;
+    animation: piscar 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes piscar {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
+}
+
+
+#btn-secreto {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    opacity: 0.15;
+    transition: all 0.3s;
+    z-index: 50;
+}
+#btn-secreto:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+</style>
+
+<body class="bg-pink-50 min-h-screen flex flex-col items-center justify-start pt-8 text-center">
+
+    <div class="flex flex-col items-center gap-4 w-full max-w-md px-4 relative">
+        <div class="avatar">
+            <div class="w-20 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
+                <img src="b_c.png" alt="avatar" />
+            </div>
+        </div>
+
+        <input type="text" placeholder="Nome da criatura..." 
+               class="input input-secondary text-center w-full max-w-xs" />
+
+        <div class="card bg-primary text-primary-content w-full max-w-xs">
+            <div class="card-body">
+                <h1 class="card-title text-xl font-bold justify-center">Meu Bichinho Virtual</h1>
+                <p class="font-bold">Clique no Botão para mudar do Dia para a Noite</p>
+                <p class="font-bold">Clique no Biscoito para Alimentar o Bichinho</p>
+                <div class="flex justify-center mt-4">
+                    <input id="mudarTema" type="checkbox" class="toggle toggle-lg" />
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="btn-secreto" onclick="mostrarFerlini()" title="??? segredo ???">👀</div>
+    </div>
+
+    <div class="flex-1 w-full max-w-5xl px-8 mt-6 flex items-center justify-between">
+        <img id="bichinho" 
+             src="b_n.png" 
+             alt="Bichinho" 
+             class="w-2/5 max-w-md drop-shadow-2xl transition-all duration-300" />
+        <aside>
+        <img id="btn" 
+             src="btn.png" 
+             alt="Alimentar" 
+             class="w-48 h-48 cursor-pointer active:scale-95 transition-all duration-200 hover:scale-110" 
+             onclick="alimentar()" />
+        </aside>
+    </div>
+
+    <div id="estrelas"></div>
+
+</body>
+
+<script src="scriptBicho.js"></script>
+</html>
