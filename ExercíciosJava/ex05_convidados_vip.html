@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex 05 — Lista de Convidados VIP</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--ink:#0f1117;--ink-mid:#3a3d4a;--ink-soft:#6b7280;--surface:#f6f7f9;--card:#ffffff;--border:#e2e4ea;--accent:#2563eb;--green:#16a34a;--red:#dc2626;--amber:#d97706;--radius:12px;--radius-sm:8px;}
+  body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--ink);line-height:1.6;padding:32px 16px 60px;min-height:100vh;}
+  .wrap{max-width:580px;margin:0 auto;}
+  .ex-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+  .ex-head{display:flex;align-items:center;gap:14px;padding:20px 28px;border-bottom:1px solid var(--border);background:#fafafa;}
+  .ex-num{width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .ex-title{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;}
+  .ex-body{padding:28px;}
+  label{display:block;font-size:.82rem;font-weight:500;color:var(--ink-mid);margin-bottom:6px;}
+  input[type=text]{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'Inter',sans-serif;font-size:.95rem;color:var(--ink);background:var(--surface);outline:none;transition:border-color .15s;}
+  input:focus{border-color:var(--accent);background:white;box-shadow:0 0 0 3px rgba(37,99,235,.1);}
+  .add-row{display:flex;gap:10px;align-items:flex-end;}
+  .add-row>div{flex:1;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--ink);color:white;border:none;border-radius:var(--radius-sm);padding:11px 18px;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;cursor:pointer;transition:opacity .15s,transform .1s;white-space:nowrap;}
+  .btn:hover{opacity:.85;}.btn:active{transform:scale(.98);}
+  .btn-green{background:var(--green);}
+  .btn-sm{padding:6px 12px;font-size:.78rem;margin:0;}
+  /* Lista */
+  #guest-list{list-style:none;margin-top:20px;}
+  #guest-list li{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);}
+  #guest-list li:last-child{border-bottom:none;}
+  .guest-name{flex:1;font-size:.93rem;}
+  .guest-name.done{text-decoration:line-through;color:var(--ink-soft);}
+  .btn-actions{display:flex;gap:6px;flex-shrink:0;}
+  .empty-msg{color:var(--ink-soft);font-size:.85rem;padding:16px 0;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ex-card">
+    <div class="ex-head">
+      <div class="ex-num">05</div>
+      <div class="ex-title">👥 Infinity Bank — Lista de Convidados VIP</div>
+    </div>
+    <div class="ex-body">
+      <div class="add-row">
+        <div>
+          <label for="guest-input">Nome do Convidado</label>
+          <input type="text" id="guest-input" placeholder="Digite o nome..."
+                 onkeydown="if(event.key==='Enter') adicionarConvidado()">
+        </div>
+        <button class="btn btn-green" onclick="adicionarConvidado()">+ Adicionar</button>
+      </div>
+      <ul id="guest-list">
+        <li class="empty-msg" id="empty-placeholder">Nenhum convidado adicionado ainda.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Array de convidados ──
+   Cada item: { nome: string, presente: boolean }
+   DOM é reconstruído a cada mudança (renderGuests).   */
+
+let convidados = [];
+
+function adicionarConvidado() {
+  const input = document.getElementById('guest-input');
+  const nome  = input.value.trim();   // .trim() evita entradas vazias ou só espaços
+  if (!nome) return;
+
+  convidados.push({ nome, presente: false });
+  input.value = '';
+  input.focus();
+  renderGuests();
+}
+
+function renderGuests() {
+  const ul = document.getElementById('guest-list');
+
+  if (convidados.length === 0) {
+    ul.innerHTML = '<li class="empty-msg">Nenhum convidado adicionado ainda.</li>';
+    return;
+  }
+
+  ul.innerHTML = convidados.map((g, i) => `
+    <li>
+      <span class="guest-name ${g.presente ? 'done' : ''}">${g.nome}</span>
+      <div class="btn-actions">
+        <button class="btn btn-sm" style="background:${g.presente ? '#6b7280' : '#16a34a'}"
+                onclick="concluirConvidado(${i})" title="Concluir chegada">✔</button>
+        <button class="btn btn-sm" style="background:#d97706"
+                onclick="editarConvidado(${i})" title="Editar nome">✏️</button>
+        <button class="btn btn-sm" style="background:#dc2626"
+                onclick="excluirConvidado(${i})" title="Excluir">🗑</button>
+      </div>
+    </li>
+  `).join('');
+}
+
+/* ── Concluir: alterna presença usando toggle de classe ── */
+function concluirConvidado(i) {
+  convidados[i].presente = !convidados[i].presente;
+  renderGuests();
+}
+
+/* ── Editar: usa prompt() para receber o novo nome ── */
+function editarConvidado(i) {
+  const novoNome = prompt('Novo nome para o convidado:', convidados[i].nome);
+  if (novoNome && novoNome.trim()) {
+    convidados[i].nome = novoNome.trim();
+    renderGuests();
+  }
+}
+
+/* ── Excluir: remove do array com splice ── */
+function excluirConvidado(i) {
+  convidados.splice(i, 1);
+  renderGuests();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex 02 — Conversor de Temperatura</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--ink:#0f1117;--ink-mid:#3a3d4a;--ink-soft:#6b7280;--surface:#f6f7f9;--card:#ffffff;--border:#e2e4ea;--accent:#2563eb;--radius:12px;--radius-sm:8px;}
+  body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--ink);line-height:1.6;padding:32px 16px 60px;min-height:100vh;}
+  .wrap{max-width:580px;margin:0 auto;}
+  .ex-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .ex-head{display:flex;align-items:center;gap:14px;padding:20px 28px;border-bottom:1px solid var(--border);background:#fafafa;}
+  .ex-num{width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .ex-title{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;}
+  .ex-body{padding:28px;}
+  label{display:block;font-size:.82rem;font-weight:500;color:var(--ink-mid);margin-bottom:6px;}
+  input[type=number]{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'Inter',sans-serif;font-size:.95rem;color:var(--ink);background:var(--surface);outline:none;transition:border-color .15s;}
+  input:focus{border-color:var(--accent);background:white;box-shadow:0 0 0 3px rgba(37,99,235,.1);}
+  .temp-row{display:flex;align-items:center;gap:20px;}
+  .temp-col{flex:1;}
+  .temp-sep{color:var(--ink-soft);font-size:1.6rem;flex-shrink:0;margin-top:14px;}
+  .temp-hint{font-size:.78rem;color:var(--ink-soft);margin-top:5px;text-align:center;}
+  @media(max-width:460px){.temp-row{flex-direction:column;}.temp-sep{transform:rotate(90deg);margin:0;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ex-card">
+    <div class="ex-head">
+      <div class="ex-num">02</div>
+      <div class="ex-title">🌡️ Conversor de Temperatura</div>
+    </div>
+    <div class="ex-body">
+      <div class="temp-row">
+        <div class="temp-col">
+          <label for="celsius">Celsius (°C)</label>
+          <input type="number" id="celsius" placeholder="0.00" step="0.1" oninput="cToF()">
+          <div class="temp-hint">Digite aqui →</div>
+        </div>
+        <div class="temp-sep">⇄</div>
+        <div class="temp-col">
+          <label for="fahrenheit">Fahrenheit (°F)</label>
+          <input type="number" id="fahrenheit" placeholder="32.00" step="0.1" oninput="fToC()">
+          <div class="temp-hint">← ou aqui</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Fórmulas ──
+   Celsius → Fahrenheit: F = (C × 9/5) + 32
+   Fahrenheit → Celsius: C = (F − 32) × 5/9   */
+
+function cToF() {
+  const c = parseFloat(document.getElementById('celsius').value);
+  document.getElementById('fahrenheit').value = isNaN(c) ? '' : ((c * 9 / 5) + 32).toFixed(2);
+}
+
+function fToC() {
+  const f = parseFloat(document.getElementById('fahrenheit').value);
+  document.getElementById('celsius').value = isNaN(f) ? '' : ((f - 32) * 5 / 9).toFixed(2);
+}
+</script>
+</body>
+</html>

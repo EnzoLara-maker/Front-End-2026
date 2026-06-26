@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex 07 — Card Guard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--ink:#0f1117;--ink-mid:#3a3d4a;--ink-soft:#6b7280;--surface:#f6f7f9;--card:#ffffff;--border:#e2e4ea;--accent:#2563eb;--green:#16a34a;--green-light:#f0fdf4;--red:#dc2626;--red-light:#fef2f2;--radius:12px;--radius-sm:8px;}
+  body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--ink);line-height:1.6;padding:32px 16px 60px;min-height:100vh;}
+  .wrap{max-width:580px;margin:0 auto;}
+  .ex-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .ex-head{display:flex;align-items:center;gap:14px;padding:20px 28px;border-bottom:1px solid var(--border);background:#fafafa;}
+  .ex-num{width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .ex-title{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;}
+  .ex-body{padding:28px;}
+  label{display:block;font-size:.82rem;font-weight:500;color:var(--ink-mid);margin-bottom:6px;}
+  input[type=text]{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'Space Grotesk',sans-serif;font-size:1.1rem;letter-spacing:.08em;color:var(--ink);background:var(--surface);outline:none;transition:border-color .15s;}
+  input:focus{border-color:var(--accent);background:white;box-shadow:0 0 0 3px rgba(37,99,235,.1);}
+  .btn{display:inline-flex;align-items:center;background:var(--accent);color:white;border:none;border-radius:var(--radius-sm);padding:11px 22px;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;cursor:pointer;transition:opacity .15s,transform .1s;margin-top:14px;}
+  .btn:hover{opacity:.85;}.btn:active{transform:scale(.98);}
+  .field{margin-bottom:16px;}
+  /* Painel de Info */
+  .info-panel{margin-top:20px;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;display:none;}
+  .info-panel.show{display:block;}
+  .ip-head{padding:12px 18px;background:var(--ink);color:white;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
+  .ip-row{display:flex;justify-content:space-between;align-items:center;padding:11px 18px;border-bottom:1px solid var(--border);font-size:.9rem;}
+  .ip-row:last-child{border-bottom:none;}
+  .ip-k{color:var(--ink-soft);}
+  .ip-v{font-weight:500;}
+  .badge-valid{background:var(--green-light);color:var(--green);padding:3px 12px;border-radius:99px;font-size:.8rem;font-weight:600;border:1px solid #bbf7d0;}
+  .badge-invalid{background:var(--red-light);color:var(--red);padding:3px 12px;border-radius:99px;font-size:.8rem;font-weight:600;border:1px solid #fecaca;}
+  /* Erro geral */
+  .result{margin-top:18px;padding:16px 20px;border-radius:var(--radius-sm);font-size:1rem;font-weight:500;display:none;align-items:center;gap:10px;}
+  .result.show{display:flex;}
+  .result.err{background:var(--red-light);color:var(--red);border:1px solid #fecaca;}
+  .result-icon{font-size:1.3rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ex-card">
+    <div class="ex-head">
+      <div class="ex-num">07</div>
+      <div class="ex-title">🛡️ Card Guard — Validador de Segurança</div>
+    </div>
+    <div class="ex-body">
+      <div class="field">
+        <label for="card-input">Número do Cartão (13 a 16 dígitos)</label>
+        <input type="text" id="card-input" placeholder="0000 0000 0000 0000" maxlength="19">
+      </div>
+      <button class="btn" onclick="analisarCartao()">Analisar Cartão</button>
+
+      <!-- Painel de resultado -->
+      <div class="info-panel" id="card-panel">
+        <div class="ip-head">Painel de Informações</div>
+        <div class="ip-row">
+          <span class="ip-k">Status</span>
+          <span class="ip-v" id="card-status"></span>
+        </div>
+        <div class="ip-row">
+          <span class="ip-k">Bandeira</span>
+          <span class="ip-v" id="card-brand"></span>
+        </div>
+        <div class="ip-row">
+          <span class="ip-k">Categoria de Setor (1º dígito IIN)</span>
+          <span class="ip-v" id="card-sector"></span>
+        </div>
+        <div class="ip-row">
+          <span class="ip-k">Banco Emissor (estimado por BIN)</span>
+          <span class="ip-v" id="card-bank"></span>
+        </div>
+      </div>
+
+      <div class="result" id="card-result">
+        <span class="result-icon">⚠️</span>
+        <span id="card-msg"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Formata o número do cartão em grupos de 4 ── */
+document.getElementById('card-input').addEventListener('input', function () {
+  let v = this.value.replace(/\D/g, '').slice(0, 16);
+  v = v.replace(/(\d{4})(?=\d)/g, '$1 ');
+  this.value = v;
+});
+
+/* ── Algoritmo de Luhn ──
+   1. Inverte os dígitos do número.
+   2. Multiplica por 2 os dígitos nas posições ímpares (índice 1, 3, 5…).
+      Se o resultado for > 9, subtrai 9.
+   3. Soma todos os dígitos.
+   4. Se o total for divisível por 10, o cartão é VÁLIDO.   */
+function luhn(num) {
+  const digits = num.split('').reverse().map(Number);
+  let soma = 0;
+  for (let i = 0; i < digits.length; i++) {
+    let d = digits[i];
+    if (i % 2 === 1) {        // posição ímpar (após inversão)
+      d *= 2;
+      if (d > 9) d -= 9;     // subtrai 9 se resultado > 9
+    }
+    soma += d;
+  }
+  return soma % 10 === 0;    // válido se divisível por 10
+}
+
+/* ── Identificação da bandeira pelo prefixo ── */
+function getBrand(num) {
+  if (/^4/.test(num))                                                          return 'Visa';
+  if (/^5[1-5]/.test(num))                                                     return 'Mastercard';
+  if (/^3[47]/.test(num))                                                      return 'American Express';
+  if (/^6(?:011|5)/.test(num))                                                 return 'Discover';
+  if (/^(636368|438935|504175|451416|636297|5067|4576|4011|506699|5090)/.test(num)) return 'Elo';
+  if (/^35(2[89]|[3-8][0-9])/.test(num))                                       return 'JCB';
+  return 'Desconhecida';
+}
+
+/* ── Setor Industrial pelo 1º dígito do IIN ── */
+function getSector(num) {
+  const mapa = {
+    '1': 'Aéreo e Viagens',
+    '2': 'Aéreo e Viagens',
+    '3': 'T&E / Entretenimento',
+    '4': 'Bancário / Financeiro',
+    '5': 'Bancário / Financeiro',
+    '6': 'Merchandising',
+    '7': 'Petróleo',
+    '8': 'Saúde / Telecom',
+    '9': 'Governamental'
+  };
+  return mapa[num[0]] || 'Não identificado';
+}
+
+/* ── Estimativa do banco emissor por BIN ── */
+function getBank(num) {
+  if (num.startsWith('4'))                            return 'Emissor Visa (banco parceiro)';
+  if (num.startsWith('51') || num.startsWith('52'))   return 'Mastercard — Tier 1';
+  if (num.startsWith('37'))                           return 'American Express';
+  if (/^(636368|438935|504175)/.test(num))            return 'Banco Elo (parceiro)';
+  return 'Banco não mapeado (BIN: ' + num.slice(0, 6) + ')';
+}
+
+/* ── Análise principal ── */
+function analisarCartao() {
+  const raw     = document.getElementById('card-input').value.replace(/\D/g, '');
+  const panel   = document.getElementById('card-panel');
+  const result  = document.getElementById('card-result');
+  const msgEl   = document.getElementById('card-msg');
+
+  // Verifica comprimento: entre 13 e 16 dígitos
+  if (raw.length < 13 || raw.length > 16) {
+    panel.className = 'info-panel';
+    result.className = 'result show err';
+    msgEl.textContent = 'O número do cartão deve ter entre 13 e 16 dígitos.';
+    return;
+  }
+
+  // Esconde erro e mostra painel
+  result.className = 'result';
+  panel.className  = 'info-panel show';
+
+  const valido = luhn(raw);
+
+  document.getElementById('card-status').innerHTML = valido
+    ? '<span class="badge-valid">✔ Válido</span>'
+    : '<span class="badge-invalid">✘ Inválido</span>';
+
+  document.getElementById('card-brand').textContent  = getBrand(raw);
+  document.getElementById('card-sector').textContent = getSector(raw);
+  document.getElementById('card-bank').textContent   = getBank(raw);
+}
+</script>
+</body>
+</html>
